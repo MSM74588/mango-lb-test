@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# install dependencies
+apt-get update
+apt-get install -y live-build gnupg2 binutils zstd ca-certificates
+
 ARCH="amd64"
 BASECODENAME="sid"
 BASEVERSION="12" # debian bookworm
@@ -76,7 +81,8 @@ lb config noauto \
   --updates false \
   --debootstrap-options "--exclude=pinephone-tweaks,mobile-tweaks-common,librem5-tweaks,pinetab-tweaks --include=apt-transport-https,ca-certificates,openssl" \
   --checksums md5 \
-  --clean \
-  --debootstrap-options "--keyring=/usr/share/keyrings/vanilla_keyring.gpg"
+  --clean
+  # --clean \
+  # --debootstrap-options "--keyring=/usr/share/keyrings/vanilla_keyring.gpg"
   
   
