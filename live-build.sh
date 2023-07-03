@@ -1,0 +1,82 @@
+#!/bin/bash
+ARCH="amd64"
+BASECODENAME="sid"
+BASEVERSION="12" # debian bookworm
+CODENAME="orchid"
+
+NAME="Mango-linux"
+# mirror to fetch packages from
+MIRROR_URL="https://repo.vanillaos.org"
+
+# use HWE kernel and packages?
+HWE_KERNEL="yes"
+
+# suffix for generated .iso files
+OUTPUT_SUFFIX="test-1" # CHANGE THIS
+
+# folder suffix for the package lists to use
+PACKAGE_LISTS_SUFFIX="vanilla-installer"
+
+
+
+if [ "$HWE_KERNEL" = "yes" ]; then
+    KERNEL_FLAVORS="amd64-hwe-${BASEVERSION}"
+else
+    KERNEL_FLAVORS="amd64"
+fi
+
+
+# linux packages => linux kernel packages
+
+# stages of live-build
+# - Bootstrap : retrieving package lists, installing the core packages, and configuring the initial system environment.
+# - Chroot : separate directory tree that emulates the root file system of the live system. It allows the build process to make changes and modifications within this isolated environment.
+# - Binary Stage : creating the binary image of the live system, such as an ISO image or a compressed file system. It includes tasks like installing additional packages, configuring the system, and creating the final image.
+# - Cleanup :  Once the binary image is generated, the cleanup stage removes temporary files and cleans up the chroot environment to ensure a clean and minimal final image.
+
+# parent-mirror-... is used for fallback
+
+# --binary-images iso (original)
+# --firmware-binary false \ > change to true for max hardware compatibility
+
+# --firmware-chroot false \ > disable the installation of firmware packages during the chroot phase of the live system build process.
+# enable if targetting max support
+
+# change --updates false to true later
+
+lb config noauto \
+  --architectures "$ARCH"\
+  --mode debian \
+  --distribution "$BASECODENAME" \
+  --parent-distribution "$BASECODENAME" \
+  --archive-areas "main non-free" \
+  --parent-archive-areas "main" \
+  --linux-packages "linux-immage linux-headers" \
+  --linux-flavours "$KERNEL_FLAVORS" \
+  --bootappend-live "boot=live config username=msm-testing user-fullname=Bee hostname=msm-testing timezone=Asia/Kolkata quiet splash" \
+  --mirror-bootstrap "$MIRROR_URL" \
+  --parent-mirror-bootstrap "$MIRROR_URL" \
+  --mirror-chroot-security "http://deb.debian.org/debian-security" \
+  --parent-mirror-chroot-security "http://deb.debian.org/debian-security" \
+  --mirror-binary-security "http://deb.debian.org/debian-security" \
+  --parent-mirror-binary-security "http://deb.debian.org/debian-security" \
+  --mirror-binary "https://repo.vanillaos.org" \
+  --parent-mirror-binary "https://repo.vanillaos.org" \
+  --keyring-packages debian-keyring \
+  --apt-options "--yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100" \
+  --apt-recommends false \
+  --cache-packages false \
+  --uefi-secure-boot enable \
+  --binary-images iso-hybrid \
+  --iso-application "$NAME" \
+  --iso-volume "$NAME" \
+  --firmware-binary false \
+  --firmware-chroot false \
+  --security true \
+  --updates false \
+  --debootstrap-options "--exclude=pinephone-tweaks,mobile-tweaks-common,librem5-tweaks,pinetab-tweaks --include=apt-transport-https,ca-certificates,openssl" \
+  --checksums md5 \
+  --clean \
+  --debootstrap-options "--keyring=/usr/share/keyrings/vanilla_keyring.gpg"
+  
+  
