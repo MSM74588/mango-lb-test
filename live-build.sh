@@ -36,7 +36,7 @@ MIRROR_BINARY_URL="http://ftp.debian.org/debian/"
 MIRROR_SECURITY_URL="http://security.debian.org/debian-security"
 
 # use HWE kernel and packages?
-HWE_KERNEL="yes"
+# HWE_KERNEL="yes"
 
 # suffix for generated .iso files
 OUTPUT_SUFFIX="test-1" # CHANGE THIS
@@ -47,17 +47,17 @@ PACKAGE_LISTS_SUFFIX="vanilla-installer"
 BOOTLOADER="syslinux"
 # default is syslinux
 # --bootloaders grub-legacy|grub-pc|syslinux|grub-efi|"BOOTLOADERS"
+KERNEL_FLAVORS="amd64"
 
 
 
+# if [ "$HWE_KERNEL" = "yes" ]; then
+#     KERNEL_FLAVORS="amd64-hwe-${BASEVERSION}"
+#     # KERNEL_FLAVORS="amd64-hwe"
 
-if [ "$HWE_KERNEL" = "yes" ]; then
-    KERNEL_FLAVORS="amd64-hwe-${BASEVERSION}"
-    # KERNEL_FLAVORS="amd64-hwe"
-
-else
-    KERNEL_FLAVORS="amd64"
-fi
+# else
+#     KERNEL_FLAVORS="amd64"
+# fi
 
 
 # linux packages => linux kernel packages
