@@ -22,9 +22,12 @@ CODENAME="orchid"
 
 NAME="Mango-linux"
 # mirror to fetch packages from
-MIRROR_URL="https://repo.vanillaos.org"
-MIRROR_BINARY_URL="https://repo.vanillaos.org"
-MIRROR_SECURITY_URL="http://deb.debian.org/debian-security"
+MIRROR_URL="http://mirror.cse.iitk.ac.in"
+# MIRROR_BINARY_URL="https://repo.vanillaos.org"
+MIRROR_BINARY_URL="http://mirror.cse.iitk.ac.in"
+
+# MIRROR_SECURITY_URL="http://deb.debian.org/debian-security"
+MIRROR_SECURITY_URL="http://mirror.cse.iitk.ac.in/debian-security"
 
 # use HWE kernel and packages?
 HWE_KERNEL="yes"
@@ -44,6 +47,8 @@ BOOTLOADER="syslinux"
 
 if [ "$HWE_KERNEL" = "yes" ]; then
     KERNEL_FLAVORS="amd64-hwe-${BASEVERSION}"
+    # KERNEL_FLAVORS="amd64-hwe"
+
 else
     KERNEL_FLAVORS="amd64"
 fi
