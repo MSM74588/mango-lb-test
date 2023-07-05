@@ -1,3 +1,6 @@
 /.build
 /chroot
 /config
+/cache
+/local
+/auto
