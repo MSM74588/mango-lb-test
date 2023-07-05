@@ -15,6 +15,8 @@ apt-get install -y live-build gnupg2 binutils zstd ca-certificates
 
 apt-get install squashfs-tools live-boot live-config live-boot-initramfs-tools live-config-sysvinit libburn4 libisofs6 libisoburn1 xorriso isolinux 
 
+apt update
+
 ARCH="amd64"
 BASECODENAME="sid"
 BASEVERSION="12" # debian bookworm
