@@ -24,12 +24,13 @@ CODENAME="orchid"
 
 NAME="Mango-linux"
 # mirror to fetch packages from
-MIRROR_URL="http://mirror.cse.iitk.ac.in"
+MIRROR_URL="http://ftp.de.debian.org"
+# indian mirror: http://mirror.cse.iitk.ac.in
 # MIRROR_BINARY_URL="https://repo.vanillaos.org"
-MIRROR_BINARY_URL="http://mirror.cse.iitk.ac.in"
+MIRROR_BINARY_URL="http://ftp.de.debian.org"
 
 # MIRROR_SECURITY_URL="http://deb.debian.org/debian-security"
-MIRROR_SECURITY_URL="http://mirror.cse.iitk.ac.in/debian-security"
+MIRROR_SECURITY_URL="http://ftp.de.debian.org/debian-security"
 
 # use HWE kernel and packages?
 HWE_KERNEL="yes"
