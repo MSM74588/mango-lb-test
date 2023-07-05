@@ -18,7 +18,9 @@ apt-get install squashfs-tools live-boot live-config live-boot-initramfs-tools l
 apt update
 
 ARCH="amd64"
-BASECODENAME="sid"
+# BASECODENAME="sid" #very unstable and not supported by all ftp
+BASECODENAME="bookworm"
+
 BASEVERSION="12" # debian bookworm
 CODENAME="orchid"
 
