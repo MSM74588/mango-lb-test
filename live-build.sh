@@ -79,8 +79,8 @@ lb config noauto \
   --mode debian \
   --distribution "$BASECODENAME" \
   --parent-distribution "$BASECODENAME" \
-  --archive-areas "main non-free" \
-  --parent-archive-areas "main" \
+  --archive-areas "main non-free contrib" \
+  --parent-archive-areas "main non-free contrib" \
   --linux-packages "linux-image linux-headers" \
   --linux-flavours "$KERNEL_FLAVORS" \
   --bootappend-live "boot=live config username=msm-testing user-fullname=Bee hostname=msm-testing timezone=Asia/Kolkata quiet splash" \
