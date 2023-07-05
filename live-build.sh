@@ -26,11 +26,11 @@ CODENAME="orchid-test-1" # release codename, custom
 
 NAME="Mango-linux"
 # mirror to fetch packages from
-MIRROR_URL="http://deb.debian.org/debian"
+MIRROR_URL="http://ftp.debian.org/debian/"
 # indian mirror: http://mirror.cse.iitk.ac.in
 # german mirror: http://ftp.de.debian.org
 # MIRROR_BINARY_URL="https://repo.vanillaos.org"
-MIRROR_BINARY_URL="http://mirror.cse.iitk.ac.in"
+MIRROR_BINARY_URL="http://ftp.debian.org/debian/"
 
 # MIRROR_SECURITY_URL="http://deb.debian.org/debian-security"
 MIRROR_SECURITY_URL="http://security.debian.org/debian-security"
