@@ -13,7 +13,7 @@ fi
 apt-get update
 apt-get install -y live-build gnupg2 binutils zstd ca-certificates
 
-apt-get apt install squashfs-tools live-boot live-config live-boot-initramfs-tools live-config-sysvinit libburn4 libisofs6 libisoburn1 xorriso isolinux 
+apt-get install squashfs-tools live-boot live-config live-boot-initramfs-tools live-config-sysvinit libburn4 libisofs6 libisoburn1 xorriso isolinux 
 
 ARCH="amd64"
 BASECODENAME="sid"
