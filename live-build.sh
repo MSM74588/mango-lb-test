@@ -23,6 +23,8 @@ CODENAME="orchid"
 NAME="Mango-linux"
 # mirror to fetch packages from
 MIRROR_URL="https://repo.vanillaos.org"
+MIRROR_BINARY_URL="https://repo.vanillaos.org"
+MIRROR_SECURITY_URL="http://deb.debian.org/debian-security"
 
 # use HWE kernel and packages?
 HWE_KERNEL="yes"
@@ -32,6 +34,10 @@ OUTPUT_SUFFIX="test-1" # CHANGE THIS
 
 # folder suffix for the package lists to use
 PACKAGE_LISTS_SUFFIX="vanilla-installer"
+
+BOOTLOADER="grub-efi"
+# --bootloaders grub-legacy|grub-pc|syslinux|grub-efi|"BOOTLOADERS"
+
 
 
 
@@ -67,17 +73,17 @@ lb config noauto \
   --parent-distribution "$BASECODENAME" \
   --archive-areas "main non-free" \
   --parent-archive-areas "main" \
-  --linux-packages "linux-immage linux-headers" \
+  --linux-packages "linux-image linux-headers" \
   --linux-flavours "$KERNEL_FLAVORS" \
   --bootappend-live "boot=live config username=msm-testing user-fullname=Bee hostname=msm-testing timezone=Asia/Kolkata quiet splash" \
   --mirror-bootstrap "$MIRROR_URL" \
   --parent-mirror-bootstrap "$MIRROR_URL" \
-  --mirror-chroot-security "http://deb.debian.org/debian-security" \
-  --parent-mirror-chroot-security "http://deb.debian.org/debian-security" \
-  --mirror-binary-security "http://deb.debian.org/debian-security" \
-  --parent-mirror-binary-security "http://deb.debian.org/debian-security" \
-  --mirror-binary "https://repo.vanillaos.org" \
-  --parent-mirror-binary "https://repo.vanillaos.org" \
+  --mirror-chroot-security "$MIRROR_SECURITY_URL" \
+  --parent-mirror-chroot-security "$MIRROR_SECURITY_URL" \
+  --mirror-binary-security "$MIRROR_SECURITY_URL" \
+  --parent-mirror-binary-security "$MIRROR_SECURITY_URL" \
+  --mirror-binary "$MIRROR_BINARY_URL" \
+  --parent-mirror-binary "$MIRROR_BINARY_URL" \
   --keyring-packages debian-keyring \
   --apt-options "--yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100" \
   --apt-recommends false \
@@ -92,7 +98,13 @@ lb config noauto \
   --updates false \
   --debootstrap-options "--exclude=pinephone-tweaks,mobile-tweaks-common,librem5-tweaks,pinetab-tweaks --include=apt-transport-https,ca-certificates,openssl" \
   --checksums md5 \
-  --clean
+  --clean \
+  --debian-installer live \
+  --debian-installer-gui true \
+  --memtest memtest86+ \
+  --initsystem systemd \
+  --bootloaders "$BOOTLOADER"
+
   # --clean \
   # --debootstrap-options "--keyring=/usr/share/keyrings/vanilla_keyring.gpg"
   
