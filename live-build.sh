@@ -35,7 +35,8 @@ OUTPUT_SUFFIX="test-1" # CHANGE THIS
 # folder suffix for the package lists to use
 PACKAGE_LISTS_SUFFIX="vanilla-installer"
 
-BOOTLOADER="grub-efi"
+BOOTLOADER="syslinux"
+# default is syslinux
 # --bootloaders grub-legacy|grub-pc|syslinux|grub-efi|"BOOTLOADERS"
 
 
