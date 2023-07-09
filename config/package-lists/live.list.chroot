@@ -12,6 +12,16 @@ gnome-session
 gnome-browser-connector
 gnome-disk-utility
 gnome-control-center
+gnome-tweaks
+gnome-terminal
+gnome-keyring
+gnome-online-accounts
+gnome-characters
+
+nautilus
+
+gnome-backgrounds
+
 kgx
 
 git
@@ -26,7 +36,6 @@ htop
 neofetch
 openssh-server
 synaptic
-ubuntu-restricted-extras
 dconf-editor
 blueman
 gnome-sushi
