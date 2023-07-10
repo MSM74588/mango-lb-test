@@ -104,7 +104,6 @@ lb config noauto \
   --binary-images iso-hybrid \
   --iso-application "$NAME" \
   --iso-volume "$NAME" \
-  --iso-bootloader "syslinux" \
   --iso-preparer "MSM" \
   --iso-publisher "MSM Mango Linux" \
   --firmware-binary false \
