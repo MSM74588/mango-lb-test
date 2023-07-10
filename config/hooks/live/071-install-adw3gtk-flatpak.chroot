@@ -7,6 +7,8 @@ if ! command -v flatpak &> /dev/null; then
     apt install -y flatpak
 fi
 
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
 # Install adw-gtk3 and adw-gtk3-dark themes using Flatpak
 flatpak install -y org.gtk.Gtk3theme.adw-gtk3 org.gtk.Gtk3theme.adw-gtk3-dark
 
