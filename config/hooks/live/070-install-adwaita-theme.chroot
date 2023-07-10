@@ -1,0 +1,41 @@
+#!/bin/bash
+# description install adw3-gtk theme for gnome
+# https://github.com/lassekongo83/adw-gtk3
+
+# Check if curl is installed
+if ! command -v curl &> /dev/null; then
+    echo "curl is not installed. Installing curl..."
+    apt update
+    apt install -y curl
+fi
+
+# GitHub repository information
+repo_owner="lassekongo83"
+repo_name="adw-gtk3"
+
+# API URL to fetch the latest release information
+api_url="https://api.github.com/repos/${repo_owner}/${repo_name}/releases/latest"
+
+# Fetch the latest release information using the GitHub API
+release_info=$(curl -sSL "${api_url}")
+
+# Extract the download URL for the adw file
+download_url=$(echo "${release_info}" | grep -o "https://github.com/${repo_owner}/${repo_name}/releases/download/[^[:space:]]*adw-gtk3v.*\.tar\.xz" | grep -v "source" | head -n 1)
+
+if [[ -z "${download_url}" ]]; then
+    echo "Failed to obtain the download URL. Please check the script and the GitHub repository."
+    exit 1
+fi
+
+# Extract the package name
+package_name=$(basename "${download_url}")
+
+# Download the package using wget to the /tmp folder
+wget -P /tmp "${download_url}"
+
+# Extract the package to /usr/share/themes
+tar -xvf "/tmp/${package_name}" -C /usr/share/themes
+
+echo "Extracted package: /usr/share/themes/${package_name%.tar.xz}"
+
+

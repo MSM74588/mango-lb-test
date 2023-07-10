@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Description: Cleans /tmp
+
+rm -rf /tmp

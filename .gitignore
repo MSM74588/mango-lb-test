@@ -1,10 +1,9 @@
 /.build
-/config
 /cache
 /local
 /auto
 .lock
 /binary
-# chroot*
 live-image*
 /chroot/
+

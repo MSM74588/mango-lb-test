@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Check if Flatpak is installed
+if ! command -v flatpak &> /dev/null; then
+    echo "Flatpak is not installed. Installing Flatpak..."
+    apt update
+    apt install -y flatpak
+fi
+
+# Install adw-gtk3 and adw-gtk3-dark themes using Flatpak
+flatpak install -y org.gtk.Gtk3theme.adw-gtk3 org.gtk.Gtk3theme.adw-gtk3-dark
+
+echo "Themes installed successfully."
