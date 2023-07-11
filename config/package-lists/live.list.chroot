@@ -7,51 +7,11 @@ gstreamer1.0-gtk3
 gstreamer1.0-pulseaudio
 gstreamer1.0-libav
 
-gnome-shell
-gnome-session
-gnome-browser-connector
-gnome-disk-utility
-gnome-control-center
-gnome-tweaks
-gnome-terminal
-gnome-keyring
-gnome-online-accounts
-gnome-characters
-
-nautilus
-
-gnome-backgrounds
-
-kgx
-
 git
 curl
 
 python3
 python3-pip
-software-properties-common
-gnome-disk-utility
-mpv
-htop
-neofetch
-openssh-server
-synaptic
-dconf-editor
-blueman
-gnome-sushi
-ffmpeg
-ffmpegthumbnailer
-net-tools
-gthumb
-
-nautilus-admin
-ranger
-nala
-
-xdg-desktop-portal-gnome
-evolution-data-server
-mutter
-gjs
 
 network-manager-gnome
 
@@ -72,8 +32,6 @@ sudo
 locales
 zstd
 pkexec
-
-nala
 
 fonts-cantarell
 fonts-dejavu-core

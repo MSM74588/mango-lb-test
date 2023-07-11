@@ -70,3 +70,26 @@ To use live-build with the Calamares installer, you need to configure the follow
 After configuring these files, you can run the live-build command (`sudo lb build`) to build the live image with the Calamares installer. Make sure you have the Calamares package available in your package repositories or added as a local package source.
 
 Remember that the specific configuration and file paths may vary depending on your live-build setup and version. Consult the documentation or configuration files specific to your live-build version for more detailed instructions.
+
+## 3
+https://live-team.pages.debian.net/live-manual/html/live-manual/customizing-package-installation.en.html
+
+## 4
+https://live-team.pages.debian.net/live-manual/html/live-manual/customizing-contents.en.html
+
+## 5
+https://live-team.pages.debian.net/live-manual/html/live-manual/customization-overview.en.html#354
+Stages of live build
+
+# 6, Binary Hooks
+To run commands in the binary stage, create a hook script with a .hook.binary suffix containing the commands either in the config/hooks/live or config/hooks/normal directories. The hook will run after all other binary commands are run, but before binary_checksums, the very last binary command. The commands in your hook do not run in the chroot, so take care not to modify any files outside of the build tree, or you may damage your build system! See the example binary hook scripts for various common binary customization tasks provided in /usr/share/doc/live-build/examples/hooks which you can copy or symlink to use them in your own configuration. 
+
+This hook will run when the binary build stage will run (when the iso file will be genrated), it will NOT run in CHROOT ENV. And will run in HOST ENV. So run carefully, it can damage the host system. It is useful for tasks like renaming the iso.
+It runs before binary_checksum which is the last stage of binary stage.
+
+# 7, Run Time Behavior
+https://live-team.pages.debian.net/live-manual/html/live-manual/customizing-run-time-behaviours.en.html
+
+# 8, Customizing the Binary Image
+https://live-team.pages.debian.net/live-manual/html/live-manual/customizing-binary.en.html
+- Explains installing Syslinux/isolinux/grub-pc (and how to customise the Boot Selection screen)
