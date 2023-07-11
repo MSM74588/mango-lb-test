@@ -84,7 +84,7 @@ lb config noauto \
   --distribution "$BASECODENAME" \
   --parent-distribution "$BASECODENAME" \
   --archive-areas "main non-free contrib" \
-  --parent-archive-areas "main non-free contrib" \
+  --parent-archive-areas "main non-free contrib multiverse" \
   --linux-packages "linux-image linux-headers" \
   --linux-flavours "$KERNEL_FLAVORS" \
   --bootappend-live "boot=live config username=msm-testing user-fullname=Bee hostname=msm-testing timezone=Asia/Kolkata quiet splash" \
