@@ -93,3 +93,6 @@ https://live-team.pages.debian.net/live-manual/html/live-manual/customizing-run-
 # 8, Customizing the Binary Image
 https://live-team.pages.debian.net/live-manual/html/live-manual/customizing-binary.en.html
 - Explains installing Syslinux/isolinux/grub-pc (and how to customise the Boot Selection screen)
+
+# 9
+Multiverse is ubuntu repo and not debian, so it will not work as archive area for DEBIAN based system
