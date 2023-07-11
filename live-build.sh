@@ -97,7 +97,7 @@ lb config noauto \
   --mirror-binary "$MIRROR_BINARY_URL" \
   --parent-mirror-binary "$MIRROR_BINARY_URL" \
   --keyring-packages debian-keyring \
-  --apt-options "--yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100 -option Acquire::Check-Valid-Until=false" \
+  --apt-options "--yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100" \
   --apt-recommends false \
   --cache-packages false \
   --uefi-secure-boot enable \
