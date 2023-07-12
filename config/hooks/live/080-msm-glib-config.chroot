@@ -1,5 +1,5 @@
 #!/bin/bash
-cat > /usr/share/glib-2.0/schemas/90-vanilla-os-lock.gschema.override <<EOF
+cat > /usr/share/glib-2.0/schemas/90-mango-linux-configs.gschema.override <<EOF
 [org.gnome.desktop.session]
 session-name = "ubuntu"
 
