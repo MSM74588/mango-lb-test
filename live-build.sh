@@ -13,27 +13,27 @@ fi
 apt-get update
 apt-get install -y live-build gnupg2 binutils zstd ca-certificates
 
-apt-get install -y squashfs-tools live-boot live-config live-boot-initramfs-tools live-config-sysvinit libburn4 libisofs6 libisoburn1 xorriso isolinux 
+apt-get install squashfs-tools live-boot live-config live-boot-initramfs-tools live-config-sysvinit libburn4 libisofs6 libisoburn1 xorriso isolinux 
 
 apt update
 
 ARCH="amd64"
 # BASECODENAME="sid" #very unstable and not supported by all ftp
-#### BASECODENAME="bookworm"
+BASECODENAME="bookworm"
 
-#### BASEVERSION="12" # debian bookworm
-#### CODENAME="orchid-test-1" # release codename, custom
+BASEVERSION="12" # debian bookworm
+CODENAME="orchid-test-1" # release codename, custom
 
 NAME="Mango-linux"
 # mirror to fetch packages from
-#### MIRROR_URL="http://ftp.debian.org/debian/"
+MIRROR_URL="http://ftp.debian.org/debian/"
 # indian mirror: http://mirror.cse.iitk.ac.in
 # german mirror: http://ftp.de.debian.org
 # MIRROR_BINARY_URL="https://repo.vanillaos.org"
-##### MIRROR_BINARY_URL="http://ftp.debian.org/debian/"
+MIRROR_BINARY_URL="http://ftp.debian.org/debian/"
 
 # MIRROR_SECURITY_URL="http://deb.debian.org/debian-security"
-#### MIRROR_SECURITY_URL="http://security.debian.org/debian-security"
+MIRROR_SECURITY_URL="http://security.debian.org/debian-security"
 
 # use HWE kernel and packages?
 # HWE_KERNEL="yes"
@@ -78,68 +78,16 @@ KERNEL_FLAVORS="amd64"
 
 # change --updates false to true later
 
-
-## DEBIAN BASED SYSTEM CONFIG ##
-# lb config noauto \
-#   --architectures "$ARCH"\
-#   --mode debian \
-#   --distribution "$BASECODENAME" \
-#   --parent-distribution "$BASECODENAME" \
-#   --archive-areas "main non-free contrib" \
-#   --parent-archive-areas "main non-free contrib" \
-#   --linux-packages "linux-image linux-headers" \
-#   --linux-flavours "$KERNEL_FLAVORS" \
-#   --bootappend-live "boot=live config username=msm-testing user-fullname=Bee hostname=msm-testing timezone=Asia/Kolkata quiet splash" \
-#   --mirror-bootstrap "$MIRROR_URL" \
-#   --parent-mirror-bootstrap "$MIRROR_URL" \
-#   --mirror-chroot-security "$MIRROR_SECURITY_URL" \
-#   --parent-mirror-chroot-security "$MIRROR_SECURITY_URL" \
-#   --mirror-binary-security "$MIRROR_SECURITY_URL" \
-#   --parent-mirror-binary-security "$MIRROR_SECURITY_URL" \
-#   --mirror-binary "$MIRROR_BINARY_URL" \
-#   --parent-mirror-binary "$MIRROR_BINARY_URL" \
-#   --keyring-packages debian-keyring \
-#   --apt-options "--yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100" \
-#   --apt-recommends false \
-#   --cache-packages false \
-#   --uefi-secure-boot enable \
-#   --binary-images iso-hybrid \
-#   --iso-application "$NAME" \
-#   --iso-volume "$NAME" \
-#   --iso-preparer "MSM" \
-#   --iso-publisher "MSM Mango Linux" \
-#   --firmware-binary false \
-#   --firmware-chroot false \
-#   --security true \
-#   --updates false \
-#   --debootstrap-options "--exclude=pinephone-tweaks,mobile-tweaks-common,librem5-tweaks,pinetab-tweaks --include=apt-transport-https,ca-certificates,openssl" \
-#   --checksums md5 \
-#   --clean \
-#   --debian-installer live \
-#   --debian-installer-gui true \
-#   --memtest memtest86+ \
-#   --initsystem systemd \
-#   --bootloaders "$BOOTLOADER"
-
-## UBUNTU BASED SYSTEM ##
-MIRROR_SECURITY_URL="http://security.ubuntu.com/ubuntu"
-# MIRROR_BINARY_URL="http://archive.ubuntu.com/ubuntu/"
-MIRROR_BINARY_URL="http://ubuntu-archive.mirrors.estointernet.in/ubuntu/"
-
-# MIRROR_URL="http://archive.ubuntu.com/ubuntu/"
-MIRROR_URL="http://ubuntu-archive.mirrors.estointernet.in/ubuntu/"
-BASEVERSION="22.04"
-BASECODENAME="focal"
-
 lb config noauto \
-  --architectures "$ARCH" \
-  --mode ubuntu \
+  --architectures "$ARCH"\
+  --mode debian \
   --distribution "$BASECODENAME" \
   --parent-distribution "$BASECODENAME" \
-  --archive-areas "main restricted universe multiverse" \
-  --parent-archive-areas "main restricted universe multiverse" \
-  --linux-packages "linux-image-generic" \
-  --bootappend-live "boot=live username=msm-testing hostname=msm-testing quiet splash" \
+  --archive-areas "main non-free contrib" \
+  --parent-archive-areas "main non-free contrib" \
+  --linux-packages "linux-image linux-headers" \
+  --linux-flavours "$KERNEL_FLAVORS" \
+  --bootappend-live "boot=live config username=msm-testing user-fullname=Bee hostname=msm-testing timezone=Asia/Kolkata quiet splash" \
   --mirror-bootstrap "$MIRROR_URL" \
   --parent-mirror-bootstrap "$MIRROR_URL" \
   --mirror-chroot-security "$MIRROR_SECURITY_URL" \
@@ -148,7 +96,7 @@ lb config noauto \
   --parent-mirror-binary-security "$MIRROR_SECURITY_URL" \
   --mirror-binary "$MIRROR_BINARY_URL" \
   --parent-mirror-binary "$MIRROR_BINARY_URL" \
-  --keyring-packages ubuntu-keyring \
+  --keyring-packages debian-keyring \
   --apt-options "--yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100" \
   --apt-recommends false \
   --cache-packages false \
@@ -170,7 +118,6 @@ lb config noauto \
   --memtest memtest86+ \
   --initsystem systemd \
   --bootloaders "$BOOTLOADER"
-
 
   # --clean \
   # --debootstrap-options "--keyring=/usr/share/keyrings/vanilla_keyring.gpg"
