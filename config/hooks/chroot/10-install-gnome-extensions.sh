@@ -8,4 +8,4 @@
 
 set -e
 
-chroot "$CHROOTDIR" /hooks/gnome-extensions-installer 3088
+# chroot "$CHROOTDIR" /hooks/gnome-extensions-installer 3088
