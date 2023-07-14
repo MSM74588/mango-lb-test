@@ -44,7 +44,7 @@ OUTPUT_SUFFIX="test-1" # CHANGE THIS
 # folder suffix for the package lists to use
 PACKAGE_LISTS_SUFFIX="vanilla-installer"
 
-BOOTLOADER="syslinux"
+BOOTLOADER="grub-pc"
 # default is syslinux
 # --bootloaders grub-legacy|grub-pc|syslinux|grub-efi|"BOOTLOADERS"
 KERNEL_FLAVORS="amd64"
