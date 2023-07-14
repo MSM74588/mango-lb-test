@@ -96,3 +96,6 @@ https://live-team.pages.debian.net/live-manual/html/live-manual/customizing-bina
 
 # 9
 Multiverse is ubuntu repo and not debian, so it will not work as archive area for DEBIAN based system
+
+# 10
+auto/config > https://live-team.pages.debian.net/live-manual/html/live-manual/examples.en.html#807
