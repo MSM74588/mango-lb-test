@@ -1,13 +1,13 @@
-gnome-shell
-gnome-session
-gnome-browser-connector
-gnome-disk-utility
-gnome-control-center
-gnome-tweaks
-gnome-terminal
-gnome-keyring
-gnome-online-accounts
-gnome-characters
+# gnome-shell
+# gnome-session
+# gnome-browser-connector
+# gnome-disk-utility
+# gnome-control-center
+# gnome-tweaks
+# gnome-terminal
+# gnome-keyring
+# gnome-online-accounts
+# gnome-characters
 
 nautilus
 
