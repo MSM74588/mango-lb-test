@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# "msm" is the username
+
+# Create a new user
+adduser --disabled-password --gecos "" msm
+
+# Add the user to the sudo group
+adduser msm sudo
