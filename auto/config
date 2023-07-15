@@ -110,5 +110,15 @@ lb config noauto \
 
   # --clean \
   # --debootstrap-options "--keyring=/usr/share/keyrings/vanilla_keyring.gpg"
+
+NAME="Mango-linux"
+VERSION="0.0.1"
+CHANNEL="testing"
+CODENAME="msm-testing-code-01"
+BASECODENAME="bookwork"
   
-  
+sed -i "s/@DISTRO_NAME/$NAME/" config/hooks/live/004-set-os-info.chroot
+sed -i "s/@VERSION/$VERSION/" config/hooks/live/004-set-os-info.chroot
+sed -i "s/@CHANNEL/$CHANNEL/" config/hooks/live/004-set-os-info.chroot
+sed -i "s/@CODENAME/$CODENAME/" config/hooks/live/004-set-os-info.chroot
+sed -i "s/@BASECODENAME/$BASECODENAME/" config/hooks/live/004-set-os-info.chroot
