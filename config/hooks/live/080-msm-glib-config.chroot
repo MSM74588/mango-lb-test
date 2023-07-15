@@ -1,70 +1,70 @@
 #!/bin/bash
-cat > /usr/share/glib-2.0/schemas/90-mango-linux-configs.gschema.override <<EOF
-[org.gnome.desktop.session]
-session-name = "ubuntu"
+# cat > /usr/share/glib-2.0/schemas/90-mango-linux-configs.gschema.override <<EOF
+# [org.gnome.desktop.session]
+# session-name = "ubuntu"
 
-[org.gnome.login-screen]
-logo=''
+# [org.gnome.login-screen]
+# logo=''
 
-[org.gnome.desktop.wm.preferences]
-button-layout = 'close,minimize,maximize:appmenu'
-titlebar-font = 'Roboto Regular 10'
+# [org.gnome.desktop.wm.preferences]
+# button-layout = 'close,minimize,maximize:appmenu'
+# titlebar-font = 'Roboto Regular 10'
 
-[org.gnome.nautilus.icon-view]
-captions = ['detailed_type', 'date_modified', 'none']
+# [org.gnome.nautilus.icon-view]
+# captions = ['detailed_type', 'date_modified', 'none']
 
-[org.gnome.desktop.interface]
-clock-format='12h'
-clock-show-seconds=true
-color-scheme='prefer-dark'
-gtk-theme='adw-gtk3-dark'
-icon-theme='Colloid-dark'
-locate-pointer=true
-show-battery-percentage=true
+# [org.gnome.desktop.interface]
+# clock-format='12h'
+# clock-show-seconds=true
+# color-scheme='prefer-dark'
+# gtk-theme='adw-gtk3-dark'
+# icon-theme='Colloid-dark'
+# locate-pointer=true
+# show-battery-percentage=true
 
-[org.gnome.desktop.sound]
-allow-volume-above-100-percent=true
+# [org.gnome.desktop.sound]
+# allow-volume-above-100-percent=true
 
-[org.gnome.desktop.session]
+# [org.gnome.desktop.session]
 
-[org.gnome.desktop.peripherals.touchpad]
-natural-scroll=true
+# [org.gnome.desktop.peripherals.touchpad]
+# natural-scroll=true
 
-[org.gnome.desktop.background]
-show-desktop-icons = true
+# [org.gnome.desktop.background]
+# show-desktop-icons = true
 
-[org.gnome.desktop.datetime]
-automatic-timezone=true
+# [org.gnome.desktop.datetime]
+# automatic-timezone=true
 
-[org.gnome.shell]
-disable-user-extensions=false
-disabled-extensions=['ubuntu-dock@ubuntu.com']
-enabled-extensions=['dash-to-dock-cosmic-@halfmexicanhalfamazing@gmail.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']
-favorite-apps=['firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.DiskUtility.desktop', 'subiquity.desktop', 'code.desktop', 'com.github.hakand34.system-monitoring-center.desktop']
+# [org.gnome.shell]
+# disable-user-extensions=false
+# disabled-extensions=['ubuntu-dock@ubuntu.com']
+# enabled-extensions=['dash-to-dock-cosmic-@halfmexicanhalfamazing@gmail.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']
+# favorite-apps=['firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.DiskUtility.desktop', 'subiquity.desktop', 'code.desktop', 'com.github.hakand34.system-monitoring-center.desktop']
 
-[org.gnome.shell.extensions.dash-to-dock]
-background-opacity=0.80000000000000004
-custom-theme-shrink=true
-dash-max-icon-size=48
-dock-fixed=false
-dock-position='BOTTOM'
-extend-height=false
-height-fraction=0.90000000000000002
+# [org.gnome.shell.extensions.dash-to-dock]
+# background-opacity=0.80000000000000004
+# custom-theme-shrink=true
+# dash-max-icon-size=48
+# dock-fixed=false
+# dock-position='BOTTOM'
+# extend-height=false
+# height-fraction=0.90000000000000002
 
-[org.gnome.shell.extensions.ding]
-start-corner='top-left'
+# [org.gnome.shell.extensions.ding]
+# start-corner='top-left'
 
-[org.gnome.Cheese]
-countdown=false
+# [org.gnome.Cheese]
+# countdown=false
 
-[org.gnome.shell.extensions.user-theme]
-name='Yaru-viridian-dark'
+# [org.gnome.shell.extensions.user-theme]
+# name='Yaru-viridian-dark'
 
-[org.gnome.mutter:ubuntu]
-attach-modal-dialogs = true
-edge-tiling = true
-dynamic-workspaces = true
-workspaces-only-on-primary = true
-focus-change-on-pointer-rest = true
-EOF
+# [org.gnome.mutter:ubuntu]
+# attach-modal-dialogs = true
+# edge-tiling = true
+# dynamic-workspaces = true
+# workspaces-only-on-primary = true
+# focus-change-on-pointer-rest = true
+# EOF
 glib-compile-schemas /usr/share/glib-2.0/schemas/
