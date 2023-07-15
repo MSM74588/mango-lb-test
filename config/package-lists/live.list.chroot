@@ -13,7 +13,7 @@ curl
 python3
 python3-pip
 
-network-manager-gnome
+# network-manager-gnome
 
 ca-certificates
 btrfs-progs
