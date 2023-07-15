@@ -115,7 +115,7 @@ NAME="Mango-linux"
 VERSION="0.0.1"
 CHANNEL="testing"
 CODENAME="msm-testing-code-01"
-BASECODENAME="bookwork"
+BASECODENAME="bookworm"
   
 sed -i "s/@DISTRO_NAME/$NAME/" config/hooks/live/004-set-os-info.chroot
 sed -i "s/@VERSION/$VERSION/" config/hooks/live/004-set-os-info.chroot
