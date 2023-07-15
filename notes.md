@@ -99,3 +99,6 @@ Multiverse is ubuntu repo and not debian, so it will not work as archive area fo
 
 # 10
 auto/config > https://live-team.pages.debian.net/live-manual/html/live-manual/examples.en.html#807
+
+## NOTE:
+Dont forget to give executable permission in hooks 
