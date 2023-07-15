@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if ! command -v git &> /dev/null; then
+    echo "git is not installed. Installing git..."
+    apt update
+    apt install -y git
+fi
+
+git clone https://github.com/yeyushengfan258/Reversal-icon-theme.git /tmp/Reversal-icon-theme
+
+cd /tmp/Reversal-icon-theme
+
+chmod +x install.sh
+
+./install.sh -d /usr/share/icons purple
+
