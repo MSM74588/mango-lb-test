@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Check if Flatpak is installed
+if ! command -v flatpak &> /dev/null; then
+    echo "Flatpak is not installed. Installing Flatpak..."
+    apt update
+    apt install -y flatpak
+fi
+
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# GAMING
+
+# UTIL
+flatpak install -y \
+    com.github.tchx84.Flatseal \
+    org.libreoffice.LibreOffice \
+    com.github.flxzt.rnote \
+    com.raggesilver.BlackBox \
+    org.gustavoperedo.FontDownloader \
+    io.github.hakandundar34coding.system-monitoring-center \
+    page.codeberg.libre_menu_editor.LibreMenuEditor \
+    https://flathub.org/apps/com.mattjakeman.ExtensionManager \
+    io.github.fabrialberio.pinapp \
+    com.github.d4nj1.tlpui \
+    com.github.PintaProject.Pinta \
+    org.x.Warpinator \
+    com.vysp3r.ProtonPlus \
+    com.usebottles.bottles \
+    net.lutris.Lutris \
+    com.heroicgameslauncher.hgl \
+    org.gnome.SoundRecorder
+

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+## FOR UBUNTU PROCESS iS DIFFERENT
+
+# FOR DEBIAN
+apt install flatpak
+apt install gnome-software-plugin-flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo

@@ -1,6 +1,5 @@
 # gnome-shell
 # gnome-session
-# gnome-browser-connector
 # gnome-disk-utility
 # gnome-control-center
 # gnome-tweaks
@@ -8,30 +7,56 @@
 # gnome-keyring
 # gnome-online-accounts
 # gnome-characters
+# - ubuntu-restricted-extras
 
-# nautilus
+# extra gnome applications
+gnome-firmware
 
-gnome-backgrounds
 
+# useful tools
+
+# Dev apps
 kgx
+ghex
 
-software-properties-common
-gnome-disk-utility
+# Media Apps
+gthumb
 mpv
-htop
+
+# Terminal Apps
+nala
+fish
 neofetch
+htop
+net-tools
+ranger
+
+# System Utilities (Binary/CLI)
 openssh-server
-synaptic
+python3-pip
+
+# Sytem Utlities
+gnome-disk-utility
+software-properties-common
+gnome-backgrounds
+gnome-browser-connector
+
+
+# Utilities
 dconf-editor
 blueman
+synaptic
+gnome-tweaks
+
+stacer
+
+# add-ons
 gnome-sushi
 ffmpeg
 ffmpegthumbnailer
-net-tools
-gthumb
-
-gnome-tweaks
-
 nautilus-admin
-ranger
-nala
+
+# pacstall (via curl script)
+
+# For minecraft (dependency)
+openjdk-8-jdk
