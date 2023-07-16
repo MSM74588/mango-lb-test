@@ -59,4 +59,4 @@ nautilus-admin
 # pacstall (via curl script)
 
 # For minecraft (dependency)
-openjdk-8-jdk
+# openjdk-8-jdk
