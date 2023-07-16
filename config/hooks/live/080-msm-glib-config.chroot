@@ -24,6 +24,9 @@ locate-pointer=true
 show-battery-percentage=true
 enable-hot-corners=true
 
+[org.gnome.desktop.background]
+picture-uri='file:///usr/share/backgrounds/msm-wallpapers/mango-wallpaper.png'
+picture-uri-dark='file:///usr/share/backgrounds/msm-wallpapers/mango-wallpaper.png'
 
 [org.gnome.desktop.sound]
 allow-volume-above-100-percent=true
