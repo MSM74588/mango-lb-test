@@ -3,4 +3,4 @@
 # include the .deb in includes.chroot
 # modify the glib accordingly
 
-apt install /var/cache/apt/archives/msmwallpaper-minimal-and-asthetics_1.0.deb
+apt install /var/cache/apt/archives/msmwallpaper-minimal-and-asthetics_2.0.deb
