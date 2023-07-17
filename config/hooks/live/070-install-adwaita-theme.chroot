@@ -9,6 +9,12 @@ if ! command -v curl &> /dev/null; then
     apt install -y curl
 fi
 
+if ! command -v wget &> /dev/null; then
+    echo "git is not installed. Installing git..."
+    apt update
+    apt install -y wget
+fi
+
 # GitHub repository information
 repo_owner="lassekongo83"
 repo_name="adw-gtk3"
