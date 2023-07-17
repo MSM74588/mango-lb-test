@@ -30,7 +30,7 @@ mokutil
 rsync
 sudo
 locales
-zstd
+# zstd
 pkexec
 
 fonts-cantarell
