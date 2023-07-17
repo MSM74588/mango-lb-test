@@ -6,6 +6,13 @@ if ! command -v git &> /dev/null; then
     apt install -y git
 fi
 
+if ! command -v wget &> /dev/null; then
+    echo "git is not installed. Installing git..."
+    apt update
+    apt install -y wget
+fi
+
+
 git clone https://github.com/yeyushengfan258/Reversal-icon-theme.git /tmp/Reversal-icon-theme
 
 cd /tmp/Reversal-icon-theme
