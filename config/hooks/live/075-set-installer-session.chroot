@@ -1,0 +1,14 @@
+#!/bin/sh
+# Description: Setup xsession
+# What to change: "msm-user", DisplayName, Background (wallpaper)
+
+useradd -m -G sudo -s /bin/bash msm-user -p '*'
+
+mkdir -p /var/lib/AccountsService/users/
+# echo "[User]
+# Session=installer" > /var/lib/AccountsService/users/msm-user
+
+echo "[User]
+Session=gnome
+Background=/usr/share/backgrounds/rover-msm.png
+DisplayName=MSM Live OS Test" > /var/lib/AccountsService/users/msm-user

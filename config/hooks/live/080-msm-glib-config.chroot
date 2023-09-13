@@ -1,8 +1,5 @@
 #!/bin/bash
 cat > /usr/share/glib-2.0/schemas/90-mango-linux-configs.gschema.override <<EOF
-[org.gnome.desktop.session]
-session-name = "mango"
-
 [org.gnome.login-screen]
 logo=''
 
@@ -23,10 +20,6 @@ icon-theme='Colloid-dark'
 locate-pointer=true
 show-battery-percentage=true
 enable-hot-corners=true
-
-[org.gnome.desktop.background]
-picture-uri='file:///usr/share/backgrounds/msm-wallpapers/mango-wallpaper.png'
-picture-uri-dark='file:///usr/share/backgrounds/msm-wallpapers/mango-wallpaper.png'
 
 [org.gnome.desktop.sound]
 allow-volume-above-100-percent=true
@@ -106,3 +99,10 @@ glib-compile-schemas /usr/share/glib-2.0/schemas/
 
 # [org.gnome.desktop.background]
 # show-desktop-icons = true
+
+# [org.gnome.desktop.session]
+# session-name = "mango"
+
+#[org.gnome.desktop.background]
+#picture-uri='file:///usr/share/backgrounds/msm-wallpapers/mango-wallpaper.png'
+#picture-uri-dark='file:///usr/share/backgrounds/msm-wallpapers/mango-wallpaper.png'

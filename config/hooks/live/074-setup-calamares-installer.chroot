@@ -1,0 +1,12 @@
+#!/bin/sh
+# Description: Setup Calamares installer
+
+
+mkdir -p /etc/skel/.config/autostart
+
+# set calamares as autostart (this is a live hook)
+if [ -f /usr/share/applications/calamares.desktop ]; then
+    cp /usr/share/applications/calamares.desktop /etc/skel/.config/autostart/
+else
+    cp /usr/local/share/applications/calamares.desktop /etc/skel/.config/autostart/
+fi
