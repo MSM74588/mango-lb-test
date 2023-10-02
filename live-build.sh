@@ -37,4 +37,6 @@ apt-get install -y \
     curl
 
 
-sudo lb build
+lb config
+
+lb build
