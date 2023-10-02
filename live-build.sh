@@ -4,10 +4,18 @@
 set -e
 
 # check for root permissions
-if [[ "$(id -u)" != 0 ]]; then
-  echo "E: Requires root permissions" > /dev/stderr
-  exit 1
+# if [[ "$(id -u)" != 0 ]]; then
+#   echo "E: Requires root permissions" > /dev/stderr
+#   exit 1
+# fi
+
+# Check if the script is running as sudo.
+if [[ $EUID -ne 0 ]]; then
+    echo "This script requires sudo privileges. Please enter your password."
+    sudo "$0" "$@"  # Re-run the script with sudo.
+    exit $?
 fi
+
 
 apt-get update
 
