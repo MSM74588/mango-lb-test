@@ -64,6 +64,9 @@ IMAGE_NAME="MangoLinux"
 # enable if targetting max support
 
 # change --updates false to true later
+# https://wiki.debian.org/DebianRepository > local repo information
+
+# Archive aresL non-free, main, etc > https://www.debian.org/doc/debian-policy/ch-archive.html#archive-areas
 
 lb config noauto \
   --architectures "$ARCH"\
