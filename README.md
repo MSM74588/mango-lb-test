@@ -22,6 +22,7 @@ sudo lb build
 
 # MINOR NOTES:
 - https://live-team.pages.debian.net/live-manual/html/live-manual/customizing-package-installation.en.html
+- https://github.com/nodiscc/debian-live-config
 
 # FIXES:
 
