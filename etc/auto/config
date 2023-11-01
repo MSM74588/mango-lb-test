@@ -68,6 +68,8 @@ IMAGE_NAME="MangoLinux"
 
 # Archive aresL non-free, main, etc > https://www.debian.org/doc/debian-policy/ch-archive.html#archive-areas
 
+# FIRMWARE LINUX FIX: https://www.mail-archive.com/debian-live@lists.debian.org/msg18982.html
+
 lb config noauto \
   --architectures "$ARCH"\
   --mode debian \
