@@ -74,7 +74,7 @@ lb config noauto \
   --mode debian \
   --distribution "$BASECODENAME" \
   --parent-distribution "$BASECODENAME" \
-  --archive-areas "main non-free contrib" \
+  --archive-areas "main non-free contrib non-free-firmware" \
   --parent-archive-areas "main non-free contrib non-free-firmware" \
   --linux-packages "linux-image linux-headers" \
   --linux-flavours "$KERNEL_FLAVORS" \
