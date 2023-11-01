@@ -4,7 +4,7 @@ set -e
 
 ARCH="amd64"
 # BASECODENAME="sid" #very unstable and not supported by all ftp
-BASECODENAME="bookworm"
+BASECODENAME="sid"
 
 BASEVERSION="12" # debian bookworm
 CODENAME="orchid-test-1" # release codename, custom
