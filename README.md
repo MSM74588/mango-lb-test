@@ -20,6 +20,9 @@ sudo lb config
 sudo lb build
 ```
 
+# MINOR NOTES:
+- https://live-team.pages.debian.net/live-manual/html/live-manual/customizing-package-installation.en.html
+
 # FIXES:
 
 FIRMWARE LINUX FIX: https://www.mail-archive.com/debian-live@lists.debian.org/msg18982.html
