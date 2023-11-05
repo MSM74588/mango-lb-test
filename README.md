@@ -20,6 +20,32 @@ sudo lb config
 sudo lb build
 ```
 
+## Build live-build from git
+
+method 1:
+
+```bash
+sudo apt-get install git build-essential
+git clone https://salsa.debian.org/live-team/live-build.git
+cd live-build
+sudo apt-get build-dep live-build
+dpkg-buildpackage -b -uc -us
+sudo dpkg -i ../live-build_*.deb
+lb --version
+```
+
+method 2:
+
+```bash
+sudo apt-get install git build-essential devscripts
+git clone https://salsa.debian.org/live-team/live-build.git
+cd live-build
+sudo mk-build-deps -i debian/control
+dpkg-buildpackage -b -uc -us
+sudo dpkg -i ../live-build_*.deb
+lb --version
+```
+
 # MINOR NOTES:
 - https://live-team.pages.debian.net/live-manual/html/live-manual/customizing-package-installation.en.html
 - https://github.com/nodiscc/debian-live-config
@@ -34,4 +60,3 @@ Notes:
 
 file to edit (on host): /usr/lib/live/build/chroot_firmware
 - change `firmware-linux` to `firmware-linux-nonfree` for nonfree firmware in FIRMWARE_PACKAGES
-
