@@ -1,6 +1,10 @@
 # Custom Linux, Mango Linux
 
 ```bash
+sudo apt install git curl zstd
+
+# live-build from apt (or) compile it from git
+
 cd ~/Desktop
 git clone https://github.com/MSM74588/mango-lb-test.git
 cd mango-lb-test
