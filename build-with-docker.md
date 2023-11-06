@@ -8,7 +8,7 @@ test-1:
 docker run --privileged -i -v /proc:/proc \
     -v ${PWD}:/working_dir \
     -w /working_dir \
-    debian:sid \
+    debian:bookworm \
     /bin/bash < live-build.sh
 
 ```
