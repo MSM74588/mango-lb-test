@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Set Theme
+Comment=Set Adw-gtk3 theme for live-session
+Type=Application
+Exec=sh -c "gsettings set org.gnome.desktop.interface gtk-theme \'adw-gtk3\' && gsettings set org.gnome.desktop.interface color-scheme \'default\'"
