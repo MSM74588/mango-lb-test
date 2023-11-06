@@ -7,8 +7,9 @@ if ! command -v flatpak &> /dev/null; then
     apt install -y flatpak
 fi
 
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
+apt install gnome-software-plugin-flatpak
 # GAMING
 
 # UTIL
