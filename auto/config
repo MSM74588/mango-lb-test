@@ -82,7 +82,7 @@ lb config noauto \
   --archive-areas "main contrib non-free-firmware" \
   --linux-packages "linux-image linux-headers" \
   --linux-flavours "$KERNEL_FLAVORS" \
-  --bootappend-live "boot=live config username=msm user-fullname=Msm-test hostname=msm-testing timezone=Asia/Kolkata quiet splash" \
+  --bootappend-live "boot=live config username=msm user-fullname=msm-gnome-config locales=en_US.utf8 hostname=msm-testing timezone=Asia/Kolkata quiet splash" \
   --mirror-bootstrap "$MIRROR_URL" \
   --mirror-chroot-security "$MIRROR_SECURITY_URL" \
   --parent-mirror-chroot-security "$MIRROR_SECURITY_URL" \
